@@ -65,3 +65,28 @@
 
   every([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
 
+
+  // Arguments Optional
+  function add() {
+    var args = Array.prototype.slice.call(arguments);
+    var flag = args.every(function (num) {
+      return Number.isFinite(num);
+    })
+
+    if (flag) {
+      if (args.length === 2) {
+        return flag[0] + flag[1];
+      } else {
+        var a = args[0];
+        if (Number.isFinite(a)) {
+          return function (b) {
+            if (Number.isFinite(b)) {
+              return a + b;
+            }
+          }
+        }
+      }
+    }
+  }
+  add(2)(3)
+
