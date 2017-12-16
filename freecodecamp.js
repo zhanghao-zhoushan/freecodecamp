@@ -1,6 +1,5 @@
 // Sum All Primes
 
-```
 function sumPrimes(number) {
     if (number < 2) return 0;
     var result = [2];
@@ -25,4 +24,4 @@ function sumPrimes(number) {
   }
 
 sumPrimes(10);
-```
+
