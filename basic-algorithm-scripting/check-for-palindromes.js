@@ -11,6 +11,7 @@
 // 函数参数的值可以为"racecar"，"RaceCar"和"race CAR"。
 
 function palindrome(str) {
+
   str = str.toLowerCase();
   str = str.replace(/[^a-z0-9]/g, '');
   var len = str.length;
@@ -20,6 +21,7 @@ function palindrome(str) {
     }
   }
   return true;
+
 }
 
 console.log(palindrome("My age is 0, 0 si ega ym."));
