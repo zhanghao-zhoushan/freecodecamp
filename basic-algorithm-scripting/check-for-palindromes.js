@@ -14,6 +14,7 @@ function palindrome(str) {
 
   str = str.toLowerCase();
   str = str.replace(/[^a-z0-9]/g, '');
+
   var len = str.length;
   for (var i = 0; i < Math.floor(len / 2); i++) {
     if (str[i] !== str[len - i - 1]) {
