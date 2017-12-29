@@ -11,9 +11,7 @@
 function factorialize(num) {
 
   if (num === 1 || num === 0) return 1;
-
   var result = num;
-
   while (num > 1) {
     num--;
     result = result * num;
