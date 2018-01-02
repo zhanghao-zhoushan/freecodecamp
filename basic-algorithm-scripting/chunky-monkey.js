@@ -29,15 +29,19 @@ function chunk(arr, size) {
 
 // use slice
 function chunk(arr, size) {
+
   var result = [];
   var len = arr.length;
   var temp = [];
+
   for (var i = 0; i < len; i += size) {
     temp = arr.slice(i, i + size);
     result.push(temp)
     temp = []
   }
+
   return result;
+
 }
 
 var result = chunk(["a", "b", "c", "d"], 2);

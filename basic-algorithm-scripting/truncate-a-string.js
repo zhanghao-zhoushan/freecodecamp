@@ -11,6 +11,7 @@
 // 但是，如果指定的参数num小于或等于3，则添加的三个点号不会计入字符串的长度。
 
 function truncate(str, num) {
+
   if (str.length > num) {
     if (num <= 3) {
       return str.slice(0, num) + '...';
@@ -18,8 +19,11 @@ function truncate(str, num) {
       return str.slice(0, num - 3) + '...';
     }
   }
+
   return str;
+
 }
 
 var result = truncate("Absolutely Longer", 2);
+
 console.log(result)

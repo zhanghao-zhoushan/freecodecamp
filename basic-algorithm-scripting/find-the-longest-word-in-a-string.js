@@ -18,6 +18,7 @@ function findLongestWord(str) {
       max = arr[i].length;
     }
   }
+
   return max;
 
 }

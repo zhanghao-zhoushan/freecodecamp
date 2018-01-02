@@ -19,5 +19,6 @@ function slasher(arr, howMany) {
 }
 
 var result = slasher([1, 2, 3], 2);
+
 console.log(result)
 
