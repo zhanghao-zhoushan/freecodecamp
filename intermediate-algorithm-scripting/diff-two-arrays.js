@@ -21,5 +21,15 @@ function diff(arr1, arr2) {
   }))
 }
 
-var result = diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+function diff1(arr1, arr2) {
+
+  var arr3 = arr1.concat(arr2);
+
+  return arr3.filter(function (item) {
+    return arr1.indexOf(item) === - 1 || arr2.indexOf(item) === - 1;
+  });
+
+}
+
+var result = diff1([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 console.log(result)
