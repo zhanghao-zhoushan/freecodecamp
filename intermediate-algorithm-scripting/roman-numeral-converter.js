@@ -13,6 +13,15 @@
 // Array.indexOf()
 // Array.join()
 
+// Note
+// Object.keys() 和 for...in 输出顺序一样
+// Object.keys(obj)
+// 按（integer indices）升序输出
+// 按添加顺序输出字符串key
+// 按添加顺序输出Symbol key （es6 中新加的）
+// integer indices ： 是指将key转化为53bit的无符号整型，然后再转会字符串 后依旧相等的 key。
+// 如 '10', '2' 为integer indices。 '01', '12a' 不是 integer indices。
+
 function convert(num) {
 
   var romanObj = {
@@ -35,16 +44,15 @@ function convert(num) {
 
   for (var key in romanObj) {
     while (num >= romanObj[key]) {
-      console.log(roman, key)
-      roman += key
-      num -= romanObj[key]
+      roman += key;
+      num -= romanObj[key];
     }
   }
 
-  return roman
+  return roman;
 
 }
 
 var result = convert(1362);
 
-console.log(result)
+console.log(result);
