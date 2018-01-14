@@ -13,10 +13,16 @@
 // Object.keys()
 
 function where(collection, source) {
-  var arr = [];
-  return arr;
+  return collection.filter(function (item) {
+    for (var key in source) {
+      if (!source.hasOwnProperty(key) || source[key] !== item[key]) {
+        return false
+      }
+    }
+    return true
+  })
 }
 
-var result = where([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+var result = where([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
 
 console.log(result)
