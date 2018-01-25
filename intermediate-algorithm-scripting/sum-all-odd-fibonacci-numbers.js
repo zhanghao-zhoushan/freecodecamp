@@ -17,7 +17,12 @@
 // Remainder
 
 function sumFibs(num) {
-  return num;
+  var arr = [1, 1]
+  while (arr[arr.length - 1] + arr[arr.length - 1])
 }
 
-sumFibs(4);
+var result = sumFibs(10)
+
+console.log(result)
+// 1 1 2 3 5 8
+// 1 1 3 5
