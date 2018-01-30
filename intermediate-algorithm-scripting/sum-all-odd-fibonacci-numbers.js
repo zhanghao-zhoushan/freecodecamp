@@ -17,8 +17,18 @@
 // Remainder
 
 function sumFibs(num) {
-  var arr = [1, 1]
-  while (arr[arr.length - 1] + arr[arr.length - 1])
+  if (num < 2) return 1;
+  var cache = [1, 1];
+  var sum = 2;
+  for (var i = cache.length; i < num; i++) {
+    var local = cache[i - 1] + cache[i - 2];
+    if (local > num) break;
+    cache[i] = local;
+    if (cache[i] % 2 !== 0) {
+      sum += cache[i];
+    }
+  }
+  return sum;
 }
 
 var result = sumFibs(10)

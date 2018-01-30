@@ -4,7 +4,7 @@
 
 // 最小的数字并非总在最前面。
 
-function sumAll1(arr) {
+function sumAll(arr) {
   var max = Math.max(arr[0], arr[1]);
   var min = Math.min(arr[0], arr[1]);
   var len = Math.abs(arr[0] - arr[1]) + 1;
